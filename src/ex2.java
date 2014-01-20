@@ -12,9 +12,11 @@ public class ex2 {
 			}
 		}
 		
+		//splitting the text into an array by splitting it in the whitespace
 		String[] censoredText = rawText.split(" ");
 		String text ="";
 		
+		//comparing all of the text that needed to be censored with the censored words
 		for(int i=0; i<censoredText.length; i++){
 			for(int j=0; j<censoredWords.length; j++){
 				if(censoredText[i].equals(censoredWords[j])){
@@ -31,7 +33,7 @@ public class ex2 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String rawText = "bath has no bathrooms in bath";
+		String rawText = "bath has no bathrooms";
 		String[] censoredWords = {"bath"};
 		
 		System.out.println(countAndCensorWords(rawText, censoredWords));
